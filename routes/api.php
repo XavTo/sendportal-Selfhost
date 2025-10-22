@@ -16,3 +16,9 @@ Route::middleware([
 
 // Non-auth'd API routes.
 Sendportal::publicApiRoutes();
+
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+    ]);
+});
